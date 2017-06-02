@@ -8,28 +8,23 @@
 
 /* For testing only */
 
-*:not(body):not(html) {
+/**:not(body):not(html) {
   box-sizing:border-box;
   border:1px dashed #000;
 }
 
 .columns {
   min-height: 100px;
-}
+}*/
 
 /* End for testing */
 
 
 body {
   font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
   background-color: #f5f5f5;
 }
-
-img {
-  /*max-width: 100%;
-  max-height: 100%;*/
-}
-
 
 .box:nth-child(-n+5) {
   margin: 0 auto 14px;
@@ -47,8 +42,53 @@ img {
   background-image: url(../img/gen-z.jpg);
 }
 
+.box {
+  position: relative;
+}
+
 .box:first-of-type, .box:last-of-type {
   height: 340px;
   background-size: cover;
   background-position: center;
+  color: #fff;
+}
+
+.head {
+  font-size: 1.8rem;
+  margin-bottom: .7rem;
+}
+
+.image {
+  width: 33.3333%;
+}
+
+.box:nth-child(n+2) .image {
+  float: left;
+  padding: 10px;
+}
+
+.box:nth-child(n+2) img {
+  max-width: 100%;
+  max-height: 85px;
+  margin: 0 auto;
+  display: block;
+}
+
+.box:nth-child(n+2):nth-child(-n+5) .text {
+  width: 66.6667%;
+  height: 100%;
+  float: right;
+  padding: 10px 15px 10px 5px;
+}
+
+.box:nth-child(n+2):nth-child(-n+5) {
+  overflow: auto;
+  clear: both;
+  background-color: #fff;
+}
+
+.box:first-of-type .text, .box:last-of-type .text {
+  padding: 25px;
+  position: absolute;
+  bottom: 0;
 }
