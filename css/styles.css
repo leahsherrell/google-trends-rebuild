@@ -24,6 +24,7 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background-color: #f5f5f5;
+  padding: 1
 }
 
 .box:nth-child(-n+5) {
@@ -124,7 +125,6 @@ img {
     height: 345px;
     display: inline;
     clear: none;
-
   }
 
   .box:nth-child(even):nth-child(-n+5) {
@@ -160,17 +160,16 @@ img {
     width: 48%;
   }
 
-  /*.box:first-of-type,  {
-    margin-right: 20px;
-  }*/
-
   .box:nth-child(n+2):nth-child(-n+5) {
-    /*margin: 0;*/
     width: 23%;
   }
 
   .box:last-of-type {
     clear: none;
+  }
+
+  .box:nth-child(even):nth-child(-n+5), .box:first-of-type, .box:nth-child(4n+1) {
+    margin-right: 2%;
   }
 
 }
