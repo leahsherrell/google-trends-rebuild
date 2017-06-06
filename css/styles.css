@@ -24,19 +24,28 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background-color: #f5f5f5;
-  padding: 1
+  padding: 16px;
 }
 
 .box:nth-child(-n+5) {
-  margin: 0 auto 14px;
-}
-
-.wrapper {
-  padding: 14px;
+  margin: 0 auto 16px;
 }
 
 .text {
-  width: 66.667%;
+  width: 58%;
+  height: 100%;
+  padding: 10px 15px 10px 5px;
+  float: right;
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
+  height: 85px;
+  margin: 10px;
+  float: left;
+  width: 33.33%;
+  max-width: 130px;
 }
 
 .box:first-of-type {
@@ -47,28 +56,17 @@ body {
   background-image: url(../img/gen-z.jpg);
 }
 
-.box {
-  position: relative;
-}
-
 .box:first-of-type, .box:last-of-type {
   height: 340px;
   background-size: cover;
   background-position: center;
   color: #fff;
+  position: relative;
 }
 
 .head {
   font-size: 1.8rem;
   margin-bottom: .7rem;
-}
-
-.image {
-  width: 33.3333%;
-  background-size: cover;
-  background-position: center;
-  height: 85px;
-  margin: 10px;
 }
 
 #one {
@@ -87,51 +85,32 @@ body {
   background-image: url('../img/littleOnes.jpg');
 }
 
-.box:nth-child(n+2) .image {
-  float: left;
-  padding: 10px;
-}
-/*
-img {
-  max-width: 100%;
-  max-height: 85px;
-  margin: 0 auto;
-  display: block;
-}*/
-
-.box:nth-child(n+2):nth-child(-n+5) .text {
-  height: 100%;
-  float: right;
-  padding: 10px 15px 10px 5px;
-}
-
 .box:nth-child(n+2):nth-child(-n+5) {
   overflow: auto;
   clear: both;
   background-color: #fff;
 }
 
-.box:first-of-type .text, .box:last-of-type .text {
+.feature-text {
   padding: 25px;
   position: absolute;
   bottom: 0;
 }
 
-
+.box {
+  box-shadow: 0px 1px 2px #dedede;
+}
 
 /*media queries*/
 
 @media screen and (min-width: 600px) {
-  .wrapper {
-    padding: 30px;
-  }
 
   .box:last-of-type {
     overflow: auto;
     clear: both;
   }
 
-  .box:nth-child(n+2):nth-child(-n+5) .text {
+  .text {
     float: none;
     padding: 0;
     height: auto;
@@ -148,18 +127,16 @@ img {
   }
 
   .box:nth-child(even):nth-child(-n+5) {
-    margin-right: 4%;
+    margin-right: 16px;
   }
 
-  .box:nth-child(n+2) .image {
-    float: none;
+  .image {
+    max-width: none;
     width: 100%;
-    height: 130px;
+    float: none;
+    margin: 0;
+    height: 165px;
     padding: 0;
-  }
-
-  img, .box:nth-child(n+2) .image {
-    max-height: 100%;
   }
 
   .box:nth-child(n+2):nth-child(-n+5) .head {
