@@ -65,19 +65,39 @@ body {
 
 .image {
   width: 33.3333%;
+  background-size: cover;
+  background-position: center;
+  height: 85px;
+  margin: 10px;
+}
+
+#one {
+  background-image: url('../img/youtube.jpg');
+}
+
+#two {
+  background-image: url('../img/hands.jpg');
+}
+
+#three {
+  background-image: url('../img/netflixy.png');
+}
+
+#four {
+  background-image: url('../img/littleOnes.jpg');
 }
 
 .box:nth-child(n+2) .image {
   float: left;
   padding: 10px;
 }
-
+/*
 img {
   max-width: 100%;
   max-height: 85px;
   margin: 0 auto;
   display: block;
-}
+}*/
 
 .box:nth-child(n+2):nth-child(-n+5) .text {
   height: 100%;
@@ -139,9 +159,7 @@ img {
   }
 
   img, .box:nth-child(n+2) .image {
-
     max-height: 100%;
-    max-width: 100%;
   }
 
   .box:nth-child(n+2):nth-child(-n+5) .head {
